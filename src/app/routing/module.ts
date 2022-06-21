@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import {CreateTrainingComponent} from "../create-training/component/create-training/create-training.component"; // CLI imports router
+import { CreateTrainingComponent } from "../create-training/component/create-training/create-training.component"; // CLI imports router
 
 const routes: Routes = [
   {
@@ -14,4 +14,5 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {
+}
