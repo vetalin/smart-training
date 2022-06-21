@@ -1,17 +1,18 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { Training } from "../../interface";
+import { CreateTrainingApiService } from "../../create-training-api.service";
 
 @Component({
   selector: 'app-create-training',
   templateUrl: './create-training.component.html',
   styleUrls: ['./create-training.component.css']
 })
-export class CreateTrainingComponent implements OnInit {
+export class CreateTrainingComponent {
 
-  constructor() {
+  constructor(private createTrainingApiService: CreateTrainingApiService) {
   }
 
-  ngOnInit(): void {
-    console.log('asdf')
+  sendTraining(training: Training): void {
+    this.createTrainingApiService.sendTraining(training);
   }
-
 }

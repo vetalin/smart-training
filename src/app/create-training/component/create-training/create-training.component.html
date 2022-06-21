@@ -1,1 +1,28 @@
-<p>create-training works!</p>
+<div class="root">
+  <h4>Внести запись о тренировке</h4>
+
+  <div class="form">
+    <div class="form-item">
+      <input #dateRef type="date" placeholder="Дата тренировки"/>
+    </div>
+    <div class="form-item">
+      <input #nameRef type="text" placeholder="Название упражнения">
+    </div>
+    <div class="form-item">
+      <input #weightRef type="text" placeholder="Вес">
+    </div>
+    <div class="form-item">
+      <input #countRef type="text" placeholder="Количество повторений">
+    </div>
+    <div class="form-item">
+      <input #effortRef type="text" placeholder="Усилие">
+    </div>
+    <div class="form-item">
+      <button
+        (click)="sendTraining({date: dateRef.value, name: nameRef.value, weight: weightRef.value, count: countRef.value, effort: effortRef.value})">
+        Ок
+      </button>
+    </div>
+  </div>
+
+</div>
